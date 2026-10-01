@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Saher Engineering Consultancy | آل ساهر للاستشارات الهندسية</title>
+<meta name="description" content="Al Saher Engineering Consultancy, Mansoura, Egypt. Structural, geotechnical, water and rehabilitation engineering since 1996.">
+<link rel="icon" type="image/png" href="assets/monogram-final.png">
+<style>
+:root{--navy:#3A3A72;--navy2:#55558f;--navy-dk:#2c2c5c;--gold:#C9A227;--ink:#1b2430;--muted:#5f6b7a;--line:#dde2e9;--soft:#f4f6f9;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.6;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* header */
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:2px solid var(--gold);backdrop-filter:blur(6px)}
+.bar{display:flex;align-items:center;gap:18px;padding:10px 0}
+.bar img.logo{height:54px;width:auto;display:block}
+.bar .sp{flex:1}
+nav.main{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+nav.main a{text-decoration:none;color:var(--navy);font-weight:600;padding:4px 2px;border-bottom:2px solid transparent}
+nav.main a:hover{border-color:var(--gold)}
+.lang{background:var(--navy);color:#fff;border:0;border-radius:6px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.menu-btn{display:none;background:none;border:1px solid var(--navy);color:var(--navy);border-radius:6px;padding:6px 10px;font:inherit;cursor:pointer}
+/* hero */
+.hero{position:relative;background:var(--navy-dk);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(assets/watermark.png) no-repeat 85% 50%/320px auto;opacity:.12;filter:invert(1)}
+.hero .wrap{position:relative;padding-top:84px;padding-bottom:72px}
+.eyebrow{display:inline-block;color:var(--gold);font-style:italic;letter-spacing:.5px;margin-bottom:10px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.15;margin:0 0 16px;max-width:780px}
+.hero p.lead{font-size:18px;max-width:700px;color:#d8e0ec;margin:0 0 26px}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:8px;margin:0 10px 10px 0}
+.btn.ghost{background:transparent;color:#fff;border:1px solid #6f82a0}
+.btn:hover{filter:brightness(1.08)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--navy2);margin-top:46px;border:1px solid var(--navy2);border-radius:10px;overflow:hidden}
+.stats div{background:var(--navy-dk);padding:18px;text-align:center}
+.stats b{display:block;font-size:28px;color:var(--gold)}
+.stats span{font-size:13px;color:#c5d0e0}
+/* sections */
+section{padding:68px 0}
+section.alt{background:var(--soft)}
+h2{margin:0 0 6px;color:var(--navy);font-size:30px}
+.kicker{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.intro{color:var(--muted);max-width:760px;margin:0 0 28px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{margin:0 0 6px;color:var(--navy);font-size:18px}
+.card .num{color:var(--gold);font-weight:700;font-size:13px}
+.card ul{margin:8px 0 0;padding-left:18px;color:var(--ink);font-size:15px}
+[dir=rtl] .card ul{padding-left:0;padding-right:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--soft);border:1px solid var(--line);padding:4px 12px;border-radius:999px;font-size:14px;color:var(--navy)}
+/* timeline */
+.tl{border-left:3px solid var(--gold);margin:12px 0 0 6px;padding-left:20px}
+[dir=rtl] .tl{border-left:0;border-right:3px solid var(--gold);margin:12px 6px 0 0;padding-left:0;padding-right:20px}
+.tl div{margin-bottom:14px}.tl b{color:var(--navy)}
+/* projects */
+.sector{margin:0 0 26px}
+.sector h3{color:var(--navy);margin:0 0 10px;font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.proj{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.proj div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;font-size:15px}
+[dir=rtl] .proj div{border-left:1px solid var(--line);border-right:4px solid var(--gold)}
+.proj small{display:block;color:var(--muted)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;counter-reset:s}
+.steps div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;counter-increment:s;font-size:14px}
+.steps div::before{content:counter(s);display:block;color:var(--gold);font-weight:700;font-size:22px}
+.steps b{display:block;color:var(--navy)}
+/* people */
+.person h3{margin:0}.person .role{color:var(--gold);font-weight:700;font-size:14px;margin-bottom:8px}
+.person p{margin:6px 0;font-size:15px}.person .mem{color:var(--muted);font-style:italic;font-size:14px}
+/* contact */
+.contact dl{margin:0;display:grid;grid-template-columns:130px 1fr;gap:8px 12px}
+.contact dt{font-weight:700;color:var(--navy)}.contact dd{margin:0}
+footer{background:var(--navy-dk);color:#b9c6da;padding:26px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+@media (max-width:860px){
+  .g2,.g3{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:12px 20px;border-bottom:2px solid var(--gold);flex-direction:column}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+  header.site .wrap{position:relative}
+  .hero::before{background-size:220px auto;background-position:95% 20%;opacity:.09}
+  .contact dl{grid-template-columns:1fr}
+}
+.wa-float{position:fixed;z-index:30;bottom:20px;right:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);text-decoration:none}
+.wa-float:hover{filter:brightness(1.06);transform:translateY(-2px)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+[dir=rtl] .wa-float{right:auto;left:20px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a href="#top"><img class="logo" src="assets/logo-final.png" alt="Al Saher Engineering Consultancy"></a>
+    <span class="sp"></span>
+    <nav class="main" id="nav">
+      <a href="#about" data-ar="من نحن">About</a>
+      <a href="#services" data-ar="الخدمات">Services</a>
+      <a href="#projects" data-ar="المشاريع">Projects</a>
+      <a href="#quality" data-ar="الجودة">Quality</a>
+      <a href="#sustainability" data-ar="الاستدامة">Sustainability</a>
+      <a href="#leadership" data-ar="القيادة">Leadership</a>
+      <a href="#gcc" data-ar="الخليج">GCC</a>
+      <a href="#contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
+    <button class="menu-btn" id="menu" type="button" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow" data-ar="منذ عام 1996">Since 1996</span>
+    <h1 data-ar="ثقة هندسية من الفكرة إلى التنفيذ">Engineering confidence from concept to construction.</h1>
+    <p class="lead" data-ar="تصميم إنشائي وجيوتقني وأعمال مياه وترميم وتدعيم، مبنية على ثلاثة عقود من الخبرة الأكاديمية والميدانية.">Structural, geotechnical, water and rehabilitation engineering, grounded in three decades of academic and field practice.</p>
+    <a class="btn" href="https://wa.me/201117773518" data-ar="ابدأ محادثة عبر واتساب">Start a conversation on WhatsApp</a>
+    <a class="btn ghost" href="#services" data-ar="خدماتنا">Our services</a>
+    <div class="stats">
+      <div><b>1996</b><span data-ar="سنة التأسيس">Established</span></div>
+      <div><b>30+</b><span data-ar="سنة من الممارسة المستمرة">Years of continuous practice</span></div>
+      <div><b>140+</b><span data-ar="مشروع تصميم إنشائي وإشراف">Structural design &amp; supervision projects</span></div>
+      <div><b>15+</b><span data-ar="محافظة مصرية">Egyptian governorates</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="kicker" data-ar="من نحن">Who we are</div>
+    <h2 data-ar="أساس أكاديمي، أثبتته الخبرة الميدانية">An academic foundation, proven in the field.</h2>
+    <p class="intro" data-ar="تأسس مكتب آل ساهر للاستشارات الهندسية عام 1996 على يد الأستاذ الدكتور ساهر رأفت الخريبي، عميد كلية الهندسة بجامعة طنطا سابقًا، على مبدأ النزاهة الهندسية قبل أي اعتبار آخر.">Al Saher Engineering Consultancy was founded in 1996 by Prof. Dr. Saher Rafaat El-Khoraiby, former Dean of the Faculty of Engineering, Tanta University, on one principle: engineering integrity above all else.</p>
+    <div class="grid g2">
+      <div class="card">
+        <h3 data-ar="القطاعات التي نخدمها">Sectors we serve</h3>
+        <div class="chips">
+          <span class="chip" data-ar="أبراج وفيلات سكنية">Residential towers &amp; villas</span>
+          <span class="chip" data-ar="تجاري ومتعدد الاستخدامات">Commercial &amp; mixed-use</span>
+          <span class="chip" data-ar="منشآت صناعية">Industrial facilities</span>
+          <span class="chip" data-ar="مستشفيات ورعاية صحية">Hospitals &amp; healthcare</span>
+          <span class="chip" data-ar="مبانٍ تعليمية">Educational buildings</span>
+          <span class="chip" data-ar="مياه وصرف صحي">Water &amp; wastewater</span>
+          <span class="chip" data-ar="كباري ومنشآت ري">Bridges &amp; irrigation structures</span>
+          <span class="chip" data-ar="مساجد ومبانٍ مؤسسية">Mosques &amp; institutional</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 data-ar="مسيرة المكتب">Our story</h3>
+        <div class="tl">
+          <div><b>1996</b><br><span data-ar="التأسيس في المنصورة: هندسة جيوتقنية وإنشائية.">Founded in Mansoura: geotechnical and structural engineering.</span></div>
+          <div><b data-ar="الألفينات">2000s</b><br><span data-ar="التوسع في مشاريع المياه والصرف الصحي لصالح الهيئة القومية لمياه الشرب والصرف الصحي.">Expansion into water and wastewater projects for the Egyptian Authority for Drinking Water &amp; Sanitary Drainage.</span></div>
+          <div><b>2005&ndash;2021</b><br><span data-ar="مكتب مراجعة معتمد لدى المجمعة المصرية لتأمين المسئولية المدنية لأعمال البناء (العشري).">Review office for the Egyptian Decennial Liability Insurance Pool for construction works.</span></div>
+          <div><b>2021</b><br><span data-ar="د. باكيناز زيدان تتولى رئاسة المكتب، ود. رغدة الخريبي مديرًا عامًا.">Prof. Dr. Bakenaz Zeidan becomes CEO; Dr. Raghda El-Khoraiby becomes General Director.</span></div>
+          <div><b>2026</b><br><span data-ar="التوجّه لدعم التصميم لصالح المقاولين والمطورين في السعودية والإمارات.">Positioned as a design back-office for contractors and developers in Saudi Arabia and the UAE.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="kicker" data-ar="خدماتنا">Services</div>
+    <h2 data-ar="ست تخصصات تحت سقف واحد">Six disciplines under one roof</h2>
+    <p class="intro" data-ar="بيانات التربة والتصميم الإنشائي وأعمال المياه ومراقبة الجودة في موقع واحد متكامل.">Geotechnical data, structural design, water infrastructure and site quality control stay connected.</p>
+    <div class="grid g3">
+      <div class="card"><span class="num">01</span><h3 data-ar="الهندسة الإنشائية">Structural Engineering</h3>
+        <ul><li data-ar="منشآت خرسانية مسلحة وحديدية ومركبة">Reinforced concrete, steel and composite structures</li><li data-ar="مبانٍ سكنية وتجارية عالية وصناعية">High-rise residential, commercial and industrial</li><li data-ar="هندسة القيمة ومراجعة الرسومات التنفيذية">Value engineering and shop-drawing review</li></ul></div>
+      <div class="card"><span class="num">02</span><h3 data-ar="الجيوتقنية والأساسات">Geotechnical &amp; Foundations</h3>
+        <ul><li data-ar="أبحاث التربة وتفسير الجسات">Soil investigation and borehole interpretation</li><li data-ar="أساسات سطحية وعميقة وتصميم الخوازيق">Shallow and deep foundations, pile design</li><li data-ar="اختبارات الخوازيق والتحميل بالألواح والنزح">Pile testing, plate loading, dewatering tests</li></ul></div>
+      <div class="card"><span class="num">03</span><h3 data-ar="الموارد المائية والهيدروليكا">Water &amp; Hydraulic Engineering</h3>
+        <ul><li data-ar="محطات معالجة وشبكات صرف وطلمبات">Treatment plants, sewer networks, pumping stations</li><li data-ar="خزانات مياه عالية (1000–3000 م³)">Elevated water tanks (1,000&ndash;3,000 m&sup3;)</li><li data-ar="منشآت ري وهدارات وقناطر">Irrigation structures, weirs and culverts</li></ul></div>
+      <div class="card"><span class="num">04</span><h3 data-ar="الترميم والتدعيم الإنشائي">Structural Rehabilitation</h3>
+        <ul><li data-ar="الفحص وتقييم الحالة الإنشائية">Structural assessment and condition surveys</li><li data-ar="التدعيم بألياف الكربون وأنظمة TRM وNSM">Carbon-fibre, TRM and NSM-FRP strengthening</li><li data-ar="إصلاح الخرسانة والحماية من التآكل">Concrete repair and corrosion protection</li></ul></div>
+      <div class="card"><span class="num">05</span><h3 data-ar="التصميم المعماري والداخلي">Architectural &amp; Interior Design</h3>
+        <ul><li data-ar="التصور والتصميم المبدئي">Concept and schematic design</li><li data-ar="التصميم الداخلي ومواصفات التشطيبات">Interior design and finishing specifications</li><li data-ar="إعداد مستندات الطرح">Tender documents</li></ul></div>
+      <div class="card"><span class="num">06</span><h3 data-ar="دعم التنفيذ وضبط الجودة">Construction Support &amp; QA/QC</h3>
+        <ul><li data-ar="الإشراف وفحص الخرسانة والحديد">Supervision, concrete and steel testing</li><li data-ar="الاختبارات غير المتلفة وتقارير الفحص">Non-destructive testing, inspection reports</li><li data-ar="الجداول الزمنية وتقييم الأثر البيئي">Project scheduling, environmental impact assessment</li></ul></div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3 data-ar="الأكواد والمواصفات">Codes &amp; standards</h3>
+      <div class="chips">
+        <span class="chip">ECP</span><span class="chip">SBC 301 / 304 / 306</span><span class="chip">ACI 318</span><span class="chip">AISC</span>
+        <span class="chip" data-ar="متطلبات بلديات دبي وأبوظبي">Dubai / Abu Dhabi municipality requirements</span>
+        <span class="chip" data-ar="يوروكود عند الطلب">Eurocode on request</span>
+      </div>
+      <p class="note" data-ar="نعمل وفق الكود الذي يتطلبه المشروع. المستندات بالعربية والإنجليزية. معمل تربة وخرسانة داخلي يدعم بيانات الأساسات والجودة.">We design to the code each project requires. Deliverables in Arabic and English. An in-house soil and concrete laboratory supports foundation and quality decisions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="kicker" data-ar="المشاريع">Projects</div>
+    <h2 data-ar="مختارات من أعمالنا">A selection of our work</h2>
+    <p class="intro" data-ar="مختارات من أكثر من 140 مشروع تصميم إنشائي وإشراف منذ 1996، موزعة على القطاعات. بيانات المالك ونطاق العمل متاحة عند الطلب.">A selection from 140+ structural design and supervision projects since 1996. Owner details and scope sheets are available on request.</p>
+
+        <div class="sector"><h3 data-ar="أبراج سكنية ومتعددة الاستخدامات">Residential &amp; Mixed-use Towers</h3><div class="proj">
+      <div>Al-Sawsan Residential Complex<small data-ar="المنصورة، الدقهلية">Mansoura, Dakahlia</small></div>
+      <div>Nile Residential &amp; Administrative Tower<small data-ar="المنصورة، الدقهلية">Mansoura, Dakahlia</small></div>
+      <div>Al-Baheiry Residential &amp; Administrative Tower<small data-ar="المنصورة، الدقهلية">Mansoura, Dakahlia</small></div>
+      <div>Al-Sawsan Plaza &amp; Al-Sawsan Mall<small data-ar="المنصورة، الدقهلية">Mansoura, Dakahlia</small></div>
+      <div>Engineers Tower<small data-ar="ميت غمر، الدقهلية">Mit Ghamr, Dakahlia</small></div>
+      <div>Al-Quds Tower<small data-ar="بورسعيد">Port Said</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="برامج الإسكان الحكومي">Government Housing Programmes</h3><div class="proj">
+      <div>National Housing Project buildings<small data-ar="منوف، المنوفية">Menouf, Menoufia</small></div>
+      <div>Premium Housing buildings<small data-ar="مدينة العبور">Obour City</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="تعليمي">Education</h3><div class="proj">
+      <div>Faculty of Agriculture<small data-ar="جامعة كفر الشيخ">Kafrelsheikh University</small></div>
+      <div>Faculty of Physical Education<small data-ar="جامعة كفر الشيخ">Kafrelsheikh University</small></div>
+      <div>Administrative Building, Faculty of Physical Education<small data-ar="جامعة طنطا">Tanta University</small></div>
+      <div>Lecture Hall, Faculty of Pharmacy<small data-ar="جامعة طنطا">Tanta University</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="رعاية صحية">Healthcare</h3><div class="proj">
+      <div>Mecca Specialized Hospital<small data-ar="السنبلاوين، الدقهلية">El-Senbellawein, Dakahlia</small></div>
+      <div>Damas Central Hospital: expansion wings<small data-ar="ميت غمر، الدقهلية">Mit Ghamr, Dakahlia</small></div>
+      <div>Al-Hayat Hospital<small data-ar="بيلا، كفر الشيخ">Bella, Kafr El-Sheikh</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="صناعي وتخزين مبرد">Industrial &amp; Cold Storage</h3><div class="proj">
+      <div>Pharmacure Pharmaceutical Factory<small data-ar="مدينة العبور">Obour City</small></div>
+      <div>Energia Engineering Industries<small data-ar="العاشر من رمضان">10th of Ramadan City</small></div>
+      <div>3,000-Ton Refrigerated Warehouse<small data-ar="المنصورة">Mansoura</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="مياه وبنية تحتية">Water &amp; Infrastructure</h3><div class="proj">
+      <div>Seawater Desalination Plant (buildings)<small data-ar="الغردقة، البحر الأحمر">Hurghada, Red Sea</small></div>
+      <div>Water Line El Qantara &ndash; El Arish &ndash; Rafah<small data-ar="سيناء">Sinai</small></div>
+      <div>Sheikh Zayed Canal irrigation structures and land-reclamation works<small data-ar="سيناء">Sinai</small></div>
+      <div>Elevated Water Tanks (1,000 m&sup3;, 45 m)<small data-ar="المنوفية">Menoufia</small></div>
+      <div>70-Ton Reinforced Concrete Bridges<small data-ar="ترع الدلتا">Delta irrigation canals</small></div>
+    </div></div>
+    <div class="sector"><h3 data-ar="تجاري ومؤسسي واتصالات">Commercial, Institutional &amp; Telecom</h3><div class="proj">
+      <div>Mansoura Wholesale Market Expansion<small data-ar="المنصورة">Mansoura</small></div>
+      <div>Ebshan Islamic Complex<small data-ar="بيلا، كفر الشيخ">Bella, Kafr El-Sheikh</small></div>
+      <div>Telephone Exchange (12,000 lines)<small data-ar="صفايف، البحيرة">Safayef, Beheira</small></div>
+    </div></div>
+    <p class="note" data-ar="كما نفذ المكتب مشاريع للهيئة القومية لمياه الشرب والصرف الصحي في عدة محافظات، من الدقهلية إلى مطروح وأسيوط والمنيا وبورسعيد.">The firm has also delivered water and wastewater projects for the Egyptian Authority for Drinking Water &amp; Sanitary Drainage across several governorates, from Dakahlia to Matrouh, Assiut, Minya and Port Said.</p>
+  </div>
+</section>
+
+<section id="quality" class="alt">
+  <div class="wrap">
+    <div class="kicker" data-ar="الجودة">Quality</div>
+    <h2 data-ar="كل حزمة تصميم تمر بمراجعة محددة قبل التسليم">Every design package passes a defined review before it is issued</h2>
+    <p class="intro" data-ar="لأن الأخطاء الهندسية تكلف أرواحًا وليس مالًا فقط.">Because engineering errors cost lives, not just money.</p>
+    <div class="steps">
+      <div><b data-ar="الفكرة وبيان التصميم">Concept &amp; design brief</b><span data-ar="الاتفاق على أسس التصميم والأكواد.">Design basis and codes agreed.</span></div>
+      <div><b data-ar="التصميم المبدئي والحسابات">Preliminary design</b><span data-ar="تصميم وفق الأكواد المطبقة.">Design to the applicable codes.</span></div>
+      <div><b data-ar="مراجعة فنية داخلية">Internal technical review</b><span data-ar="مراجعة الحسابات بواسطة استشاري أول وتنسيق إنشائي ومعماري وكهروميكانيكي.">Senior calculation checking and structural / architectural / MEP coordination.</span></div>
+      <div><b data-ar="تسليم العميل">Client submission</b><span data-ar="دورة مراجعة منظمة للتعليقات.">Structured comment resolution.</span></div>
+      <div><b data-ar="التصميم النهائي">Final design</b><span data-ar="الإصدار للتنفيذ مع ضبط الإصدارات.">Issue for construction with version control.</span></div>
+      <div><b data-ar="دعم التنفيذ">Construction support</b><span data-ar="الرد على الاستفسارات الفنية ومعالجة مشكلات الموقع.">Technical queries and site issues resolved against design intent.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="sustainability">
+  <div class="wrap">
+    <div class="kicker" data-ar="الاستدامة والابتكار">Sustainability &amp; Innovation</div>
+    <h2 data-ar="الاستدامة كتخصص هندسي">Sustainability as an engineering discipline</h2>
+    <p class="intro" data-ar="قياس وتحديد ومواصفات تبدأ من اختيار المواد وحتى الأداء في الخدمة.">Measured, specified and designed in, from material selection to performance in service.</p>
+    <div class="grid g2">
+      <div class="card"><h3 data-ar="خدمات الاستدامة">Sustainability services</h3>
+        <ul><li data-ar="حساب وتقرير البصمة الكربونية لمشروعات البناء">Carbon footprint assessment and reporting for construction projects</li>
+        <li data-ar="تصميم الخلطات الخرسانية الخضراء (إضافات أسمنتية، UHPC، مواد رابطة منخفضة الكربون)">Green concrete mix design (SCMs, UHPC, low-carbon binders)</li>
+        <li data-ar="تحليل تكلفة دورة الحياة للنظم الإنشائية">Life-cycle cost analysis for structural systems</li>
+        <li data-ar="تقييم الأثر البيئي">Environmental impact assessment</li></ul></div>
+      <div class="card"><h3 data-ar="البحث والابتكار">Research &amp; innovation</h3>
+        <ul><li data-ar="أبحاث إصلاح كمرات UHPC المتشققة مسبقًا والمعرّضة للتآكل، مع تطبيق عملي لتقنيتي TRM وNSM باستخدام ألياف الكربون">Research on the repair of pre-cracked UHPC beams exposed to corrosion, applying TRM and NSM strengthening with carbon fibre</li>
+        <li data-ar="مراقبة سلامة المنشآت (SHM): مرحلة البحث والنموذج التجريبي لقياس الشروخ">Structural health monitoring: crack-monitoring prototype at research stage</li>
+        <li data-ar="الذكاء الاصطناعي في الهندسة المدنية">AI in civil engineering</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="alt">
+  <div class="wrap">
+    <div class="kicker" data-ar="القيادة">Leadership</div>
+    <h2 data-ar="خبرة أكاديمية وميدانية">Academic and field experience</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card person"><h3>Prof. Dr. Saher Rafaat El-Khoraiby</h3><div class="role" data-ar="المؤسس (رحمه الله)">Founder (in memoriam)</div>
+        <p data-ar="استشاري ميكانيكا التربة والأساسات، رقم القيد 2167/1 نقابة المهندسين.">Consultant in geotechnical engineering, foundation engineering and soil mechanics. Reg. No. 2167/1 ESE.</p>
+        <p class="mem" data-ar="عميد كلية الهندسة بجامعة طنطا سابقًا.">Former Dean of the Faculty of Engineering, Tanta University.</p></div>
+      <div class="card person"><h3>Prof. Dr. Bakenaz Abdel Azim Zeidan</h3><div class="role" data-ar="الرئيس التنفيذي منذ 2021">Chief Executive Officer (since 2021)</div>
+        <p data-ar="استشاري الموارد المائية وهندسة السدود والمنشآت الخرسانية، رقم القيد 02671/01 نقابة المهندسين.">Consultant in water resources, hydraulic and dam engineering. Reg. No. 02671/01 ESE.</p>
+        <p data-ar="أستاذ متفرغ بكلية الهندسة جامعة طنطا، ورئيس قسم الري والهيدروليكا سابقًا؛ دكتوراه من IIT Bombay؛ أستاذ زائر بجامعة UC Berkeley (2015–2016).">Emeritus Professor, Tanta University; former Head of Irrigation &amp; Hydraulics; Ph.D. IIT Bombay; Visiting Professor, UC Berkeley (2015&ndash;2016).</p></div>
+      <div class="card person"><h3>Dr. Raghda Saher Rafaat El-Khoraiby</h3><div class="role" data-ar="المدير العام منذ 2021">General Director (since 2021)</div>
+        <p data-ar="مدرس الهندسة المدنية (Assistant Professor) بالمعهد العالي للهندسة والتكنولوجيا بالدلتا.">Assistant Professor of Civil Engineering, Delta Higher Institute for Engineering &amp; Technology.</p>
+        <p data-ar="عضو أكاديمي بمعهد ISI واشنطن، سفيرة الذكاء الاصطناعي (MCIT)، أخصائية معتمدة في البصمة الكربونية، سفيرة GOEIC.">Academic Member, Institute for Sustainable Infrastructure (ISI); AI Ambassador (MCIT); Certified Carbon Footprint Specialist; GOEIC Ambassador.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gcc">
+  <div class="wrap">
+    <div class="kicker" data-ar="الخليج">Saudi Arabia &amp; UAE</div>
+    <h2 data-ar="هندسة من مصر لمشروعات الخليج">Engineering delivered from Egypt for GCC projects</h2>
+    <p class="intro" data-ar="نعمل بجانب الاستشاري أو المقاول المحلي المرخّص، الذي يظل مهندس السجل حيث يلزم الترخيص المحلي. نقدّم العمق الهندسي ويقدّم الشريك الترخيص والتواجد في الموقع.">Al Saher works alongside the locally licensed consultant or contractor, who remains engineer of record where local registration is required. We provide the engineering depth; our partner provides the local licence and site presence.</p>
+    <div class="grid g3">
+      <div class="card"><h3 data-ar="مكتب تصميم مساند">Design back-office</h3><p data-ar="حزم تصميم إنشائي ومدني بحسب برنامج الشريك.">Structural and civil design packages to the partner&rsquo;s programme.</p></div>
+      <div class="card"><h3 data-ar="مراجعة ودعم فني">Review &amp; technical support</h3><p data-ar="مراجعة الحسابات والرسومات والرد على الاستفسارات الفنية.">Calculation and drawing review, technical queries.</p></div>
+      <div class="card"><h3 data-ar="جيوتقنية واختبارات">Geotechnical &amp; testing</h3><p data-ar="تفسير بيانات التربة وتصميم الأساسات واختبارات الخوازيق والتحميل.">Soil data interpretation, foundation design, pile and plate testing.</p></div>
+    </div>
+    <p class="note" data-ar="التطوير التجاري في السعودية والإمارات قيد التأسيس. لا يوجد للمكتب فروع في الخليج حاليًا.">Business development for Saudi Arabia and the UAE is being established. The firm does not currently operate offices in the Gulf.</p>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact">
+    <div class="kicker" data-ar="تواصل معنا">Contact</div>
+    <h2 data-ar="لنناقش مشروعك">Let&rsquo;s discuss your project</h2>
+    <p class="intro" data-ar="أرسل ملخص المشروع ونطاق العمل لنعود إليك بعرض فني.">Share your project brief and scope and we will come back with a technical proposal.</p>
+    <div class="grid g2">
+      <div class="card"><dl>
+        <dt data-ar="واتساب المكتب">Office WhatsApp</dt><dd><a href="https://wa.me/201117773518" dir="ltr">+20 111 777 3518</a></dd>
+        <dt data-ar="البريد الإلكتروني">Email</dt><dd><a href="mailto:dr.raghda2022@gmail.com">dr.raghda2022@gmail.com</a></dd>
+        <dt data-ar="تليفاكس المكتب">Office telefax</dt><dd dir="ltr" style="display:inline-block">+20 50 2944566</dd>
+        <dt data-ar="العنوان">Address</dt><dd data-ar="3 شارع منتصر، برج السوسن، الدور الأرضي، المنصورة، الدقهلية، مصر (35514)">3 Montaser Street, Al-Sawsan Tower, Ground Floor, Mansoura, Dakahlia, Egypt (P.C. 35514)</dd>
+      </dl>
+      <p><a class="btn" href="https://wa.me/201117773518" data-ar="راسلنا عبر واتساب">Message us on WhatsApp</a></p></div>
+      <div class="card"><h3 data-ar="الخطوات">Next steps</h3>
+        <ol style="padding-inline-start:20px;margin:8px 0 0">
+          <li data-ar="شاركنا ملخص المشروع ونطاقه">Share your project brief and scope</li>
+          <li data-ar="استلم عرضًا فنيًا بالنطاق والأكواد والمخرجات">Receive a technical proposal: scope, codes, deliverables</li>
+          <li data-ar="اجتماع استشاري مع المدير العام والاستشاري الأول">Consultancy meeting with the General Director and senior consultant</li>
+        </ol></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>&copy; <span id="yr">2026</span> Al Saher Engineering Consultancy | <span lang="ar">مكتب آل ساهر للاستشارات الهندسية</span></span>
+  <span data-ar="منذ عام 1996">Since 1996</span>
+</div></footer>
+
+<script>
+(function(){
+  var html=document.documentElement, btn=document.getElementById("lang"), nav=document.getElementById("nav");
+  var nodes=[].slice.call(document.querySelectorAll("[data-ar]"));
+  nodes.forEach(function(n){ n.setAttribute("data-en", n.textContent); });
+  function set(lang){
+    var ar = lang==="ar";
+    html.lang = ar?"ar":"en"; html.dir = ar?"rtl":"ltr";
+    nodes.forEach(function(n){ n.textContent = ar ? n.getAttribute("data-ar") : n.getAttribute("data-en"); });
+    btn.textContent = ar ? "English" : "العربية";
+    try{ localStorage.setItem("as-lang", lang); }catch(e){}
+  }
+  btn.addEventListener("click", function(){ set(html.lang==="ar"?"en":"ar"); });
+  document.getElementById("menu").addEventListener("click", function(){ nav.classList.toggle("open"); });
+  nav.addEventListener("click", function(){ nav.classList.remove("open"); });
+  var saved=null; try{ saved=localStorage.getItem("as-lang"); }catch(e){}
+  if(saved==="ar") set("ar");
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+<a class="wa-float" href="https://wa.me/201117773518" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.49L3 29l6.68-1.75A12.94 12.94 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16.003 3Zm0 23.7c-2.02 0-3.99-.54-5.72-1.56l-.41-.24-3.97 1.04 1.06-3.87-.27-.4A10.65 10.65 0 0 1 5.3 16c0-5.9 4.8-10.7 10.7-10.7 5.9 0 10.7 4.8 10.7 10.7s-4.8 10.7-10.7 10.7Zm5.87-8.01c-.32-.16-1.9-.94-2.2-1.05-.29-.1-.5-.16-.72.16-.21.32-.83 1.05-1.02 1.27-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg></a>
+</body>
+</html>

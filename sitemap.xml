@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alsaher-eng.github.io/alsaher/</loc>
     <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alsaher-eng.github.io/alsaher/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alsaher-eng.github.io/alsaher/ar.html"/>
+  </url>
+  <url>
+    <loc>https://alsaher-eng.github.io/alsaher/ar.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alsaher-eng.github.io/alsaher/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alsaher-eng.github.io/alsaher/ar.html"/>
   </url>
 </urlset>

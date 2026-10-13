@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@400;700&family=Noto+Kufi+Arabic:wght@500;600&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,8 +49,11 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;color:var(--ink);background:#fff;font-family:"IBM Plex Sans","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;font-size:16px}
-[lang=ar] body,html[lang=ar]{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Lato","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;font-size:16px}
+html[lang=ar] body{font-family:"Noto Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif}
+h1,h2,h3,.proof b{font-family:"Marcellus",Georgia,serif;font-weight:400;letter-spacing:.2px}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .proof b{font-family:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;font-weight:600;letter-spacing:0}
+html[lang=ar] .hero h1{line-height:1.45}
 a{color:inherit}
 img{max-width:100%}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
@@ -133,6 +136,11 @@ details.more summary{cursor:pointer;font-weight:700;color:var(--navy)}
 .tests div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
 .tests b{display:block;color:var(--navy)}
 .tests span{font-size:14px;color:var(--muted)}
+.labpics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.labpics figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.labpics img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.labpics figcaption{font-size:13px;color:var(--muted);padding:8px 12px}
+@media (max-width:760px){.labpics{grid-template-columns:1fr}}
 
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;counter-reset:s}
@@ -218,8 +226,8 @@ footer a{color:#fff}
   <div class="wrap">
     <div>
       <p class="eyebrow" data-ar="منذ 1996 · المنصورة، مصر">Since 1996 · Mansoura, Egypt</p>
-      <h1 data-ar="قرارات أساسات وتصميم إنشائي مبنية على تربة مختبرة.">Foundation and structural decisions, based on tested ground.</h1>
-      <p class="lead" data-ar="أبحاث التربة والاختبارات الحقلية والمعملية والتصميم الإنشائي وهندسة المياه، من مكتب واحد بالمنصورة منذ 1996.">Soil investigation, field and laboratory testing, structural design and water-infrastructure engineering, from one office in Mansoura since 1996.</p>
+      <h1 data-ar="نبني قرارات الأساسات والتصميم الإنشائي على نتائج اختبارات التربة.">Foundation and structural decisions, based on tested ground.</h1>
+      <p class="lead" data-ar="نقدّم أبحاث التربة والاختبارات الحقلية والمعملية والتصميم الإنشائي وهندسة المياه من مكتب واحد بالمنصورة منذ عام 1996.">Soil investigation, field and laboratory testing, structural design and water-infrastructure engineering, from one office in Mansoura since 1996.</p>
       <a class="btn" href="#contact" data-ar="ناقش مشروعك">Discuss a project</a>
       <a class="btn ghost" href="#projects" data-ar="سجل أعمالنا">See our project record</a>
     </div>
@@ -248,7 +256,7 @@ footer a{color:#fff}
           <path d="M62 120h16"/>
           <circle cx="70" cy="184" r="3" fill="#fff"/><circle cx="70" cy="224" r="3" fill="#fff"/><circle cx="70" cy="264" r="3" fill="#fff"/>
         </g>
-        <g fill="#d6dcea" font-family="IBM Plex Sans,Arial" font-size="11">
+        <g fill="#d6dcea" font-family="Lato,Arial" font-size="11">
           <text x="58" y="112">BH-1</text>
           <text x="330" y="186">Layer 1</text>
           <text x="330" y="226">Layer 2</text>
@@ -262,43 +270,43 @@ footer a{color:#fff}
 
 <div class="proof" aria-label="Key facts">
   <div class="wrap">
-    <div><b>1996</b><span data-ar="سنة التأسيس، ممارسة مستمرة">Founded; continuous practice</span></div>
+    <div><b>1996</b><span data-ar="عام التأسيس، والعمل متواصل منذ ذلك الحين">Founded; continuous practice</span></div>
     <div><b>140+</b><span data-ar="مشروع في سجل أعمالنا">Projects in our record</span></div>
     <div><b>15+</b><span data-ar="محافظة مصرية">Egyptian governorates</span></div>
-    <div><b>2005&ndash;2021</b><span data-ar="مكتب مراجعة بالمجمعة المصرية لتأمين المسئولية المدنية">Design review office, decennial liability insurance pool</span></div>
+    <div><b>2005&ndash;2021</b><span data-ar="مكتب مراجعة لدى المجمعة المصرية لتأمين المسئولية المدنية">Design review office, decennial liability insurance pool</span></div>
   </div>
 </div>
 
 <section id="services">
   <div class="wrap">
     <div class="kicker" data-ar="الخدمات">Services</div>
-    <h2 data-ar="من بيانات التربة إلى المنشأ">From ground data to structure</h2>
-    <p class="intro" data-ar="أبحاث التربة والاختبارات والتصميم الإنشائي وأعمال المياه في مكتب واحد، فتبقى بيانات الموقع مرتبطة بقرارات التصميم.">Soil investigation, testing, structural design and water engineering in one office, so site data stays connected to design decisions.</p>
+    <h2 data-ar="من بيانات التربة إلى تصميم المنشأ">From ground data to structure</h2>
+    <p class="intro" data-ar="نجمع أبحاث التربة والاختبارات والتصميم الإنشائي وأعمال المياه في مكتب واحد، فتظل بيانات الموقع حاضرة في كل قرار تصميمي.">Soil investigation, testing, structural design and water engineering in one office, so site data stays connected to design decisions.</p>
     <div class="grid g3">
       <div class="card svc"><span class="num">01</span><h3 data-ar="الجيوتقنية والأساسات">Geotechnical &amp; foundations</h3>
         <p class="need" data-ar="«ما الأساس الآمن والاقتصادي لهذا الموقع؟»">&ldquo;What foundation is safe and economical on this site?&rdquo;</p>
-        <ul><li data-ar="الجسات وتقارير أبحاث التربة والأساسات">Boreholes, soil investigation and foundation reports</li><li data-ar="تصميم الأساسات السطحية والعميقة والخوازيق">Shallow, deep and pile foundation design</li><li data-ar="توصيات التأسيس مبنية على نتائج الاختبارات">Foundation recommendations based on test results</li></ul>
-        <p class="meta" data-ar="سجل: تقارير تربة وأساسات من 2011 حتى 2025 في محافظات عديدة.">Record: soil and foundation reports from 2011 to 2025 across many governorates.</p></div>
+        <ul><li data-ar="الجسات وتقارير أبحاث التربة والأساسات">Boreholes, soil investigation and foundation reports</li><li data-ar="تصميم الأساسات السطحية والعميقة والخوازيق">Shallow, deep and pile foundation design</li><li data-ar="توصيات تأسيس تستند إلى نتائج الاختبارات">Foundation recommendations based on test results</li></ul>
+        <p class="meta" data-ar="من أعمالنا: تقارير تربة وأساسات من 2011 حتى 2025 في محافظات عديدة.">Record: soil and foundation reports from 2011 to 2025 across many governorates.</p></div>
       <div class="card svc"><span class="num">02</span><h3 data-ar="الدعم الهندسي للمقاولين">Engineering support for contractors</h3>
-        <p class="need" data-ar="«نحتاج تصميم نزح أو سند حفر لنبدأ العمل»">&ldquo;We need a dewatering or excavation-support design to start digging.&rdquo;</p>
+        <p class="need" data-ar="«نحتاج تصميمًا للنزح أو لسند جوانب الحفر لنبدأ العمل»">&ldquo;We need a dewatering or excavation-support design to start digging.&rdquo;</p>
         <ul><li data-ar="تصميم النزح الجوفي">Dewatering design</li><li data-ar="تصميم سند جوانب الحفر (الشدات)">Excavation-support (shoring) design</li><li data-ar="تقارير أسلوب التنفيذ وسلامة المنشآت المجاورة">Method statements and adjacent-structure safety reports</li></ul>
-        <p class="meta" data-ar="سجل: مشروعات صرف صحي بالدقهلية والقليوبية والشرقية والقاهرة، 2021–2023.">Record: sewerage projects in Dakahlia, Qalyubia, Sharqia and Cairo, 2021&ndash;2023.</p></div>
+        <p class="meta" data-ar="من أعمالنا: مشروعات صرف صحي بالدقهلية والقليوبية والشرقية والقاهرة، 2021–2023.">Record: sewerage projects in Dakahlia, Qalyubia, Sharqia and Cairo, 2021&ndash;2023.</p></div>
       <div class="card svc"><span class="num">03</span><h3 data-ar="الاختبارات الحقلية والمعملية">Field &amp; laboratory testing</h3>
-        <p class="need" data-ar="«هل الردم أو الخرسانة أو الحديد في الموقع مطابق؟»">&ldquo;Is the fill, concrete or steel on site acceptable?&rdquo;</p>
+        <p class="need" data-ar="«هل الردم والخرسانة والحديد في الموقع مطابقة للمواصفات؟»">&ldquo;Is the fill, concrete or steel on site acceptable?&rdquo;</p>
         <ul><li data-ar="اختبارات الدمك والتحميل بالألواح">Compaction and plate load tests</li><li data-ar="اختبارات تحميل الخوازيق والآبار">Pile load and well tests</li><li data-ar="ضبط جودة الخرسانة واختبارات الشد وتصميم الخلطات">Concrete QC, tensile tests, mix design</li></ul>
-        <p class="meta" data-ar="سجل: مدارس ومستشفيات ومحطات ومشروعات إسكان في الدلتا والقناة.">Record: schools, hospitals, treatment plants and housing projects in the Delta and Canal region.</p></div>
+        <p class="meta" data-ar="من أعمالنا: مدارس ومستشفيات ومحطات ومشروعات إسكان في الدلتا والقناة.">Record: schools, hospitals, treatment plants and housing projects in the Delta and Canal region.</p></div>
       <div class="card svc"><span class="num">04</span><h3 data-ar="التصميم الإنشائي والإشراف">Structural design &amp; supervision</h3>
-        <p class="need" data-ar="«صمّم مبنانا وأشرف على تنفيذه»">&ldquo;Design and supervise our building.&rdquo;</p>
+        <p class="need" data-ar="«نريد تصميم مبنانا والإشراف على تنفيذه»">&ldquo;Design and supervise our building.&rdquo;</p>
         <ul><li data-ar="مبانٍ خرسانية مسلحة حتى بدروم وأرضي و11 دورًا">Reinforced concrete buildings up to basement, ground and 11 floors</li><li data-ar="مبانٍ تعليمية وصحية وصناعية وعامة">Educational, healthcare, industrial and public buildings</li><li data-ar="لبشة مسلحة وأساسات خازوقية">Raft and pile foundations</li></ul>
-        <p class="meta" data-ar="سجل: أبراج سكنية بالمنصورة وميت غمر، ومبانٍ جامعية ومستشفيات.">Record: residential towers in Mansoura and Mit Ghamr, university buildings, hospitals.</p></div>
+        <p class="meta" data-ar="من أعمالنا: أبراج سكنية بالمنصورة وميت غمر، ومبانٍ جامعية ومستشفيات.">Record: residential towers in Mansoura and Mit Ghamr, university buildings, hospitals.</p></div>
       <div class="card svc"><span class="num">05</span><h3 data-ar="المياه والصرف ومنشآت الري">Water, wastewater &amp; irrigation</h3>
-        <p class="need" data-ar="«منشآت مشروعنا المائي»">&ldquo;Structures for our water project.&rdquo;</p>
+        <p class="need" data-ar="«نحتاج تصميم المنشآت الخرسانية لمشروعنا المائي»">&ldquo;Structures for our water project.&rdquo;</p>
         <ul><li data-ar="الأعمال الإنشائية والجيوتقنية لمشروعات المياه والصرف">Structural and geotechnical engineering for water and wastewater projects</li><li data-ar="خزانات مياه عالية 200–1000 م³">Elevated water tanks, 200&ndash;1,000 m&sup3;</li><li data-ar="كباري 30–90 طن وسحارات وهدارات وقناطر">Bridges (30&ndash;90 t), siphons, weirs, culverts</li></ul>
-        <p class="meta" data-ar="سجل: المنوفية وكفر الشيخ والبحيرة وسيناء والفيوم والمنيا.">Record: Menoufia, Kafr El-Sheikh, Beheira, Sinai, Fayoum, Minya.</p></div>
+        <p class="meta" data-ar="من أعمالنا: المنوفية وكفر الشيخ والبحيرة وسيناء والفيوم والمنيا.">Record: Menoufia, Kafr El-Sheikh, Beheira, Sinai, Fayoum, Minya.</p></div>
       <div class="card svc"><span class="num">06</span><h3 data-ar="المعاينات الفنية ومراجعة التصميم">Inspection &amp; design review</h3>
         <p class="need" data-ar="«هل هذا المبنى أو التصميم آمن؟»">&ldquo;Is this building, or this design, safe?&rdquo;</p>
         <ul><li data-ar="تقارير الحالة الإنشائية للمباني القائمة">Structural condition reports for existing buildings</li><li data-ar="تقييم الخرسانة وتصميم الترميم والتدعيم">Concrete assessment, repair and strengthening design</li><li data-ar="مراجعة مستقلة للتصميمات الإنشائية">Independent review of structural designs</li></ul>
-        <p class="meta" data-ar="سجل: مكتب مراجعة بالمجمعة المصرية لتأمين المسئولية المدنية 2005–2021.">Record: design review office for the decennial liability insurance pool, 2005&ndash;2021.</p></div>
+        <p class="meta" data-ar="من أعمالنا: مكتب مراجعة لدى المجمعة المصرية لتأمين المسئولية المدنية 2005–2021.">Record: design review office for the decennial liability insurance pool, 2005&ndash;2021.</p></div>
     </div>
     <p class="note" data-ar="نصمم وفق الكود المصري، وأكواد أخرى عند الطلب بالتنسيق مع الاستشاري المحلي المرخّص. المستندات بالعربية والإنجليزية. كما نُعِدّ تصميمات معمارية وإنشائية متكاملة ومستندات طرح وبرامج زمنية للمباني العامة.">We design to the Egyptian Code; other codes on request, coordinated with the locally licensed engineer of record. Deliverables in Arabic and English. We also prepare integrated architectural and structural packages, tender documents and time schedules for public buildings.</p>
   </div>
@@ -307,8 +315,8 @@ footer a{color:#fff}
 <section id="testing" class="alt">
   <div class="wrap">
     <div class="kicker" data-ar="الاختبارات">Testing</div>
-    <h2 data-ar="نتائج اختبار مع تفسير هندسي">Test results with an engineering interpretation</h2>
-    <p class="intro" data-ar="اختبارات حقلية في الموقع، يدعمها معمل التربة والخرسانة بالمكتب. نطاق كل اختبار وطريقة إعداد التقرير متاحان عند الطلب.">Field tests on site, supported by the office&rsquo;s soil and concrete laboratory. The scope of each test and how results are reported are available on request.</p>
+    <h2 data-ar="نتائج اختبارات مصحوبة بتفسير هندسي">Test results with an engineering interpretation</h2>
+    <p class="intro" data-ar="نجري الاختبارات الحقلية في الموقع، ويدعمها معمل التربة والخرسانة بالمكتب. ونطاق كل اختبار وطريقة إعداد تقريره متاحان عند الطلب.">Field tests on site, supported by the office&rsquo;s soil and concrete laboratory. The scope of each test and how results are reported are available on request.</p>
     <div class="tests">
       <div><b data-ar="الدمك">Compaction</b><span data-ar="طبقات الإحلال والردم وطبقات أساس الطرق">Replacement layers, backfill, road base</span></div>
       <div><b data-ar="التحميل بالألواح">Plate load</b><span data-ar="تربة الإحلال أسفل الأساسات">Replacement soil under foundations</span></div>
@@ -317,6 +325,10 @@ footer a{color:#fff}
       <div><b data-ar="حديد التسليح">Reinforcing steel</b><span data-ar="اختبارات الشد">Tensile tests</span></div>
       <div><b data-ar="الآبار والمياه">Wells &amp; water</b><span data-ar="اختبارات الآبار والنزح، وجودة مياه الخلط">Well and dewatering tests, mixing-water quality</span></div>
     </div>
+    <div class="labpics">
+      <figure><img src="lab-equipment.jpg" width="960" height="720" loading="lazy" alt="Compression testing machine, drying oven, sieves and Proctor equipment in the Al Saher laboratory"><figcaption data-ar="معمل المكتب بالمنصورة: ماكينة اختبار الضغط، فرن التجفيف، المناخل وأدوات الدمك">Office laboratory, Mansoura: compression machine, drying oven, sieves and compaction equipment</figcaption></figure>
+      <figure><img src="lab-concrete-cubes.jpg" width="960" height="720" loading="lazy" alt="Concrete test cubes from site, labelled for compression testing"><figcaption data-ar="مكعبات خرسانة من المواقع معدّة لاختبار الضغط">Concrete cubes from site, labelled for compression testing</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -324,7 +336,7 @@ footer a{color:#fff}
   <div class="wrap">
     <div class="kicker" data-ar="المشروعات">Projects</div>
     <h2 data-ar="مختارات من سجل أعمالنا">Selected from our record</h2>
-    <p class="intro" data-ar="لكل مشروع نذكر دور المكتب. تفاصيل النطاق متاحة عند الطلب. لا ننشر بيانات الملاك أو قيم الأعمال.">For each project we state Al Saher&rsquo;s role. Scope details are available on request. We don&rsquo;t publish owners&rsquo; details or contract values.</p>
+    <p class="intro" data-ar="نذكر دور المكتب في كل مشروع، وتفاصيل النطاق متاحة عند الطلب. ولا ننشر بيانات الملاك أو قيم التعاقد.">For each project we state Al Saher&rsquo;s role. Scope details are available on request. We don&rsquo;t publish owners&rsquo; details or contract values.</p>
     <div class="grid g3">
       <article class="card proj"><span class="tag" data-ar="سكني">Residential</span><h3 data-ar="مجمع السوسن السكني">Al-Sawsan Residential Complex</h3>
         <dl><dt data-ar="الموقع">Location</dt><dd data-ar="المنصورة، الدقهلية">Mansoura, Dakahlia</dd><dt data-ar="المنشأ">Structure</dt><dd data-ar="بدروم وأرضي و9 أدوار على أساسات خازوقية">Basement, ground + 9 floors on piles</dd><dt data-ar="دور المكتب">Our role</dt><dd data-ar="التصميم الإنشائي والإشراف">Structural design &amp; supervision</dd></dl></article>
@@ -367,19 +379,19 @@ footer a{color:#fff}
 <section id="quality" class="alt">
   <div class="wrap">
     <div class="kicker" data-ar="الجودة والمراجعة">Quality &amp; review</div>
-    <h2 data-ar="كل حزمة تصميم تمر بمراجعة قبل الإصدار">Every design package is reviewed before it is issued</h2>
+    <h2 data-ar="تخضع كل المخططات للمراجعة الدقيقة قبل اعتمادها">Every design package is reviewed before it is issued</h2>
     <p class="intro" data-ar="لأن الأخطاء الهندسية تكلف أرواحًا، لا مالًا فقط.">Because engineering errors cost lives, not just money.</p>
     <div class="steps">
       <div><b data-ar="أسس التصميم">Design basis</b><span data-ar="الاتفاق على البيانات والأكواد.">Data and codes agreed.</span></div>
       <div><b data-ar="التصميم والحسابات">Design &amp; calculation</b><span data-ar="وفق الكود المطبق.">To the applicable code.</span></div>
-      <div><b data-ar="مراجعة داخلية">Internal review</b><span data-ar="مراجعة الحسابات بواسطة الاستشاري.">Calculations checked by the consultant.</span></div>
+      <div><b data-ar="مراجعة داخلية">Internal review</b><span data-ar="يراجع الاستشاري الحسابات.">Calculations checked by the consultant.</span></div>
       <div><b data-ar="تعليقات العميل">Client comments</b><span data-ar="دورة منظمة للرد على التعليقات.">A structured comment cycle.</span></div>
-      <div><b data-ar="الإصدار للتنفيذ">Issue for construction</b><span data-ar="مع ضبط الإصدارات.">With version control.</span></div>
+      <div><b data-ar="الاعتماد للتنفيذ">Issue for construction</b><span data-ar="مع توثيق كل تعديل على المخططات.">With version control.</span></div>
       <div><b data-ar="دعم التنفيذ">Site support</b><span data-ar="الرد على استفسارات الموقع.">Site queries answered.</span></div>
     </div>
     <div class="callout">
-      <h3 data-ar="خبرة 15 عامًا في مراجعة تصميمات الآخرين">15 years reviewing other engineers&rsquo; designs</h3>
-      <p data-ar="من 2005 حتى 2021 عمل المكتب مكتبَ مراجعة لدى المجمعة المصرية لتأمين المسئولية المدنية لأعمال البناء، يراجع التصميمات الإنشائية لمبانٍ سكنية وتجارية قبل إصدار وثائق التأمين.">From 2005 to 2021 the office was a design review office for the Egyptian Decennial Liability Insurance Pool, reviewing structural designs of residential and commercial buildings before insurance policies were issued.</p>
+      <h3 data-ar="خمسة عشر عامًا في مراجعة التصميمات الإنشائية">15 years reviewing other engineers&rsquo; designs</h3>
+      <p data-ar="من 2005 حتى 2021 عمل المكتب جهةَ مراجعة لدى المجمعة المصرية لتأمين المسئولية المدنية لأعمال البناء، فراجع التصميمات الإنشائية لمبانٍ سكنية وتجارية قبل إصدار وثائق التأمين.">From 2005 to 2021 the office was a design review office for the Egyptian Decennial Liability Insurance Pool, reviewing structural designs of residential and commercial buildings before insurance policies were issued.</p>
     </div>
   </div>
 </section>
@@ -390,12 +402,12 @@ footer a{color:#fff}
     <h2 data-ar="خبرة أكاديمية وميدانية">Academic and field experience</h2>
     <p class="intro" data-ar="أسّس المكتب عام 1996 الأستاذ الدكتور ساهر الخريبي والأستاذة الدكتورة باكيناز زيدان.">The office was founded in 1996 by Prof. Dr. Saher El-Khoraiby and Prof. Dr. Bakenaz Zeidan.</p>
     <div class="grid g3">
-      <div class="card person"><h3>Prof. Dr. Bakenaz Abdel Azim Zeidan</h3><div class="role" data-ar="شريك مؤسس، الرئيس التنفيذي منذ 2021">Co-founder; Chief Executive Officer since 2021</div>
-        <p data-ar="مهندس استشاري في تصميم المنشآت الخرسانية، نقابة المهندسين (شهادة رقم 1/2671).">Consultant engineer in concrete structures design, Egyptian Engineers Syndicate (certificate no. 1/2671).</p>
-        <p data-ar="أستاذ الموارد المائية وهندسة السدود؛ رئيس قسم الري والهيدروليكا بهندسة طنطا سابقًا؛ دكتوراه وماجستير IIT Bombay.">Professor of Water Resources &amp; Dam Engineering; former Head of Irrigation &amp; Hydraulics, Tanta University; Ph.D. and M.Sc., IIT Bombay.</p></div>
+      <div class="card person"><h3>Prof. Dr. Bakenaz Abdel Azim Zeidan</h3><div class="role" data-ar="شريكة مؤسِّسة، والرئيس التنفيذي منذ 2021">Co-founder; Chief Executive Officer since 2021</div>
+        <p data-ar="مهندسة استشارية في تصميم المنشآت الخرسانية، نقابة المهندسين (شهادة رقم 1/2671).">Consultant engineer in concrete structures design, Egyptian Engineers Syndicate (certificate no. 1/2671).</p>
+        <p data-ar="أستاذة متفرغة للموارد المائية وهندسة السدود بكلية الهندسة جامعة طنطا، ورئيسة قسم الري والهيدروليكا سابقًا؛ حاصلة على الدكتوراه والماجستير من IIT Bombay، وباحثة زائرة بجامعة UC Berkeley (2015–2016).">Emeritus Professor of Water Resources &amp; Dam Engineering, Tanta University; former Head of Irrigation &amp; Hydraulics; Ph.D. and M.Sc., IIT Bombay; visiting scholar, UC Berkeley (2015&ndash;2016).</p></div>
       <div class="card person"><h3>Dr. Raghda Saher Rafaat El-Khoraiby</h3><div class="role" data-ar="المدير العام منذ 2021">General Director since 2021</div>
-        <p data-ar="تقود التصميم الإنشائي والتحول الرقمي بالمكتب. مدرس الهندسة المدنية بالمعهد العالي للهندسة والتكنولوجيا بالدلتا.">Leads structural design and digital practice at the office. Assistant Professor of Civil Engineering, Delta Higher Institute for Engineering &amp; Technology.</p>
-        <p data-ar="بحث الدكتوراه: إصلاح كمرات الخرسانة فائقة الأداء المتشققة والمعرّضة للتآكل.">Doctoral research: repair of pre-cracked UHPC beams exposed to corrosion.</p></div>
+        <p data-ar="تقود التصميم الإنشائي والتحول الرقمي بالمكتب، وتعمل مدرّسًا للهندسة المدنية بالمعهد العالي للهندسة والتكنولوجيا بالدلتا.">Leads structural design and digital practice at the office. Assistant Professor of Civil Engineering, Delta Higher Institute for Engineering &amp; Technology.</p>
+        <p data-ar="حاصلة على الدكتوراه في الهندسة الإنشائية من جامعة طنطا (2023) في أساليب إصلاح كمرات الخرسانة فائقة الأداء المتشققة والمعرّضة للتآكل. سفيرة الذكاء الاصطناعي (وزارة الاتصالات وتكنولوجيا المعلومات، 2026)، وسفيرة البصمة الكربونية (الهيئة العامة للرقابة على الصادرات والواردات، 2026).">Ph.D. in Structural Engineering, Tanta University (2023): repair of pre-cracked UHPC beams exposed to corrosion. AI Ambassador (MCIT, 2026); Carbon Footprint Ambassador (GOEIC, 2026).</p></div>
       <div class="card person"><h3>Prof. Dr. Saher Rafaat El-Khoraiby</h3><div class="role" data-ar="شريك مؤسس (رحمه الله، 2020)">Co-founder (in memoriam, 2020)</div>
         <p data-ar="مهندس استشاري في تصميم الأساسات وميكانيكا التربة، نقابة المهندسين (شهادة رقم 1/2167).">Consultant engineer in foundation design and soil mechanics, Egyptian Engineers Syndicate (certificate no. 1/2167).</p>
         <p data-ar="عميد كلية الهندسة بجامعة طنطا سابقًا.">Former Dean of the Faculty of Engineering, Tanta University.</p></div>
@@ -407,12 +419,13 @@ footer a{color:#fff}
   <div class="wrap">
     <div class="kicker" data-ar="الخليج">Saudi Arabia &amp; UAE</div>
     <h2 data-ar="شريك هندسي عن بُعد لمشروعات الخليج">A remote engineering partner for GCC projects</h2>
-    <p class="intro" data-ar="نعمل بجانب الاستشاري أو المقاول المحلي المرخّص، الذي يبقى مهندس السجل حيث يلزم الترخيص المحلي. نقدّم العمق الهندسي، ويقدّم الشريك الترخيص والتواجد في الموقع.">We work alongside the locally licensed consultant or contractor, who remains engineer of record wherever local registration is required. We provide engineering depth; our partner provides the local licence and site presence.</p>
+    <p class="intro" data-ar="نعمل إلى جانب الاستشاري أو المقاول المحلي المرخّص، الذي يظل المهندس المسؤول حيثما يُشترط الترخيص المحلي. نقدّم نحن العمق الهندسي، ويقدّم الشريك الترخيص والوجود في الموقع.">We work alongside the locally licensed consultant or contractor, who remains engineer of record wherever local registration is required. We provide engineering depth; our partner provides the local licence and site presence.</p>
     <div class="grid g3">
       <div class="card"><h3 data-ar="الجيوتقنية والأساسات">Geotechnical &amp; foundations</h3><p data-ar="تفسير بيانات التربة وتصميم الأساسات.">Soil data interpretation and foundation design.</p></div>
-      <div class="card"><h3 data-ar="التصميم الإنشائي">Structural design</h3><p data-ar="حزم تصميم إنشائي بحسب برنامج الشريك.">Structural design packages to the partner&rsquo;s programme.</p></div>
-      <div class="card"><h3 data-ar="المراجعة والدعم الفني">Review &amp; technical support</h3><p data-ar="مراجعة الحسابات والرسومات والرد على الاستفسارات الفنية.">Calculation and drawing review; technical queries.</p></div>
+      <div class="card"><h3 data-ar="التصميم الإنشائي">Structural design</h3><p data-ar="مخططات ومذكرات حسابية إنشائية وفق الجدول الزمني للشريك.">Structural design packages to the partner&rsquo;s programme.</p></div>
+      <div class="card"><h3 data-ar="المراجعة والدعم الفني">Review &amp; technical support</h3><p data-ar="مراجعة الحسابات والمخططات والرد على الاستفسارات الفنية.">Calculation and drawing review; technical queries.</p></div>
     </div>
+    <p class="note" data-ar="خبرة خليجية: قدّمت أ.د. باكيناز زيدان، الرئيس التنفيذي، دراسات هيدرولوجية ومناخية لمشروعات في الخليج، وبرنامجًا تدريبيًا في هندسة وفحص السدود لمهندسي وزارة الطاقة الإماراتية، من خلال شركة Scientific Business Solutions بالإمارات.">GCC experience: Prof. Dr. Bakenaz Zeidan, our CEO, has delivered hydro-meteorological studies for Gulf projects and a dam-engineering and inspection training programme for UAE Ministry of Energy engineers, through Scientific Business Solutions (UAE).</p>
     <p class="note" data-ar="لا يوجد للمكتب فروع أو تراخيص في دول الخليج حاليًا.">The office does not currently have branches or licences in the Gulf.</p>
   </div>
 </section>
@@ -421,7 +434,7 @@ footer a{color:#fff}
   <div class="wrap contact">
     <div class="kicker" data-ar="تواصل معنا">Contact</div>
     <h2 data-ar="ناقش مشروعك">Discuss a project</h2>
-    <p class="intro" data-ar="أرسل لنا موقع المشروع ونوعه والخدمة المطلوبة، ونرد عليك بالخطوة التالية.">Send us the project location, type and the service you need, and we&rsquo;ll reply with the next step.</p>
+    <p class="intro" data-ar="أرسل لنا موقع المشروع ونوعه والخدمة المطلوبة، وسنرد عليك بالخطوة التالية.">Send us the project location, type and the service you need, and we&rsquo;ll reply with the next step.</p>
     <div class="grid g2">
       <div class="card">
         <form class="inq" id="inq" novalidate>
@@ -458,10 +471,10 @@ footer a{color:#fff}
           <dt data-ar="تليفاكس المكتب">Office telefax</dt><dd><a href="tel:+20502944566" dir="ltr">+20 50 2944566</a></dd>
           <dt data-ar="العنوان">Address</dt><dd data-ar="3 شارع منتصر، برج السوسن، الدور الأرضي، المنصورة، الدقهلية، مصر (35514)">3 Montaser Street, Al-Sawsan Tower, Ground Floor, Mansoura, Dakahlia, Egypt (35514)</dd>
         </dl>
-        <h3 style="margin-top:22px" data-ar="ما الذي يساعدنا على الرد بسرعة">What helps us reply quickly</h3>
+        <h3 style="margin-top:22px" data-ar="ما يساعدنا على الرد سريعًا">What helps us reply quickly</h3>
         <ul>
           <li data-ar="موقع المشروع ومساحته وعدد الأدوار">Site location, area and number of floors</li>
-          <li data-ar="أي تقرير تربة أو رسومات موجودة">Any existing soil report or drawings</li>
+          <li data-ar="أي تقرير تربة أو مخططات موجودة">Any existing soil report or drawings</li>
           <li data-ar="المرحلة الحالية والموعد المطلوب">Current stage and required date</li>
         </ul>
       </div>

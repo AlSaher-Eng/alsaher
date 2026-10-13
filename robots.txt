@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alsaher-eng.github.io/alsaher/sitemap.xml
